@@ -1,4 +1,4 @@
-package com.company.Moshe;
+package Moshe;
 
 import java.io.File;
 
@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 public class WriteDataToExcel {
+
     int NumRowId = 0;
     //TODO - Fix file path problem, allow it to work on other devices
     //TODO - Add an array for multiple emails at once

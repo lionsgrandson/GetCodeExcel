@@ -1,4 +1,4 @@
-package com.company.Moshe;
+package Moshe;
 
 import java.io.BufferedInputStream;
 import java.net.URL;
@@ -13,6 +13,7 @@ public class Main {
         int exit = 1;
 //        int NumRowId = 1;
         WriteDataToExcel writeDataToExcel = new WriteDataToExcel();
+
 
         Scanner myObj = new Scanner(System.in);
         while (exit < 11) {
