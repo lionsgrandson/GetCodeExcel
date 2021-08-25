@@ -14,7 +14,10 @@ import java.util.TreeMap;
 
 public class WriteDataToExcel {
     int NumRowId = 0;
-
+    //TODO - Fix file path problem, allow it to work on other devices
+    //TODO - Add an array for multiple emails at once
+    //TODO - change it from writing to excel to write to a text file with the option to add that into exel
+    //TODO - or fix the overwriting file problem
     public WriteDataToExcel() {
 
 
