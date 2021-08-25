@@ -1,7 +1,5 @@
 package com.company.Moshe;
 
-// Java program to write data in excel sheet using java code
-
 import java.io.File;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -9,17 +7,12 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
 public class WriteDataToExcel {
-
-    // any exceptions need to be caught
-//    public static void main(String[] args) throws Exception
-//    {
     int NumRowId = 0;
 
     public WriteDataToExcel() {
@@ -39,27 +32,22 @@ public class WriteDataToExcel {
 
     // This data needs to be written (Object[])
     Map<Integer, Object[]> studentData
-            = new TreeMap<Integer, Object[]>();
+            = new TreeMap<>();
     public void Excel(String website, String email) throws Exception {
 
-
-//        studentData.put(
-//                1,
-//                new Object[]{"Website", "Email"});
         studentData.put(
                 NumRowId,
                 new Object[]{website, email});
 
 
-//        System.out.println("row is: " + NumRowId);
         Set<Integer> keyid = studentData.keySet();
         NumRowId++;
         int rowid = NumRowId;
 
 //https://www.maimonides.org/
 // https://mosheschwartzberg.com
-// writing the data into the sheets...
-        //https://byboston.org
+//https://byboston.org
+        // writing the data into the sheets...
 
         for (Integer key : keyid) {
 
@@ -71,7 +59,6 @@ public class WriteDataToExcel {
 
                 Cell cell = row.createCell(cellid++);
                 cell.setCellValue((String) obj);
-//                System.out.println((String) obj + " cell "+cellid + " row " + rowid + " key " + keyid);
             }
         }
 
@@ -79,19 +66,13 @@ public class WriteDataToExcel {
         // writing the workbook into the file...
         String path ="C:/Users/moshe/OneDrive/Documents/WZO/project/Eurpoe-Names/EmailsSheet.xlsx";
         File output = new File(path);
-        if(!output.exists()) {
-            output.createNewFile();
-        }
+        output.createNewFile();
 
         FileOutputStream out = new FileOutputStream(output);
 
         workbook.write(out);
 
-
-        if(out!=null) {
-            out.close();
-        }
-
+        out.close();
 
     }
 

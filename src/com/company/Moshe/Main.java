@@ -3,9 +3,7 @@ package com.company.Moshe;
 import java.io.BufferedInputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Collections;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -47,11 +45,6 @@ public class Main {
                     System.out.println(m.group());
                      emails = m.group();
                 }
-
-//                System.out.println(emails);
-//                if(emails==""){
-//                    emails= "nothing found";
-//                }
                 writeDataToExcel.Excel(urlString,emails);
             } catch (Exception e) {
                 System.out.println(e.getMessage() + " Failed to find more");
