@@ -14,7 +14,7 @@ This Java-based script is designed to scrape email addresses from a specified we
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/get-code-excel.git
+    git clone https://github.com/lionsgrandson/GetCodeExcel.git
     cd get-code-excel
     ```
 
